@@ -1,0 +1,55 @@
+@use 'sass:color';
+
+@include tablet {
+    .contenedor-anuncios {
+        @include grid(3, 2rem);
+    }
+}
+
+.anuncio {     
+    background-color: color-mix(in srgb, white 5%, $gris);
+    border: 1px solid color-mix(in srgb, black 10%, $gris);
+    margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+
+    .contenido-anuncio {
+        padding: 2rem;
+    }  
+    
+    h3, p {
+        margin: 0;
+    }
+}
+
+.precio {
+    color: $verde;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    max-width: 40rem;
+
+    li {
+        flex: 1;
+        display: flex;
+        gap: 1rem;
+
+        img {
+            flex: 0 0 3rem;
+        }
+
+        p {
+            font-weight: $black;
+        }
+    }
+}
