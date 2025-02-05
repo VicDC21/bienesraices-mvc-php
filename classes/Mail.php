@@ -25,7 +25,7 @@ class Mail {
 
     public function setContent() {
         // Configurar el contenido del email
-        $this->mail->setFrom($_POST['email'], $_POST['nombre']);  
+        $this->mail->setFrom("admin@admin.com");  
         $this->mail->addAddress("admin@admin.com", 'BienesRaices.com');
         $this->mail->Subject = 'Tienes un mensaje nuevo';
 
